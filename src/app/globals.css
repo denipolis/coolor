@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-neutral-200;
-        @apply text-neutral-800;
-    }
+  body {
+    @apply bg-neutral-200;
+    @apply text-neutral-800;
+  }
 }

@@ -2,7 +2,7 @@
 
 import React, { ChangeEventHandler } from "react";
 import { Inter } from "next/font/google";
-import { Title } from './Title';
+import { Title } from "./Title";
 
 const font = Inter({
   subsets: ["latin"],
@@ -32,7 +32,7 @@ export default function ColorInfo(props: IColorInfoProps) {
         onChange={(e) => {
           const caretStart = e.target.selectionStart;
           const caretEnd = e.target.selectionEnd;
-          
+
           props.onChange ? props.onChange(e) : "";
 
           e.target.setSelectionRange(caretStart, caretEnd);
