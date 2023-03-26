@@ -1,6 +1,6 @@
 {
   "name": "coolor",
-  "description": "Simple color picker made with NextJS",
+  "description": "Simple and minimalistic color picker. Made with NextJS and love 💘",
   "packageManager": "yarn@1.22.19",
   "version": "1.0.0",
   "author": "Denipolis",
