@@ -1,8 +1,8 @@
-import React from "react";
-import { Inter } from "next/font/google";
+import React from 'react';
+import { Inter } from 'next/font/google';
 
 const font = Inter({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 interface ILabelProps {
@@ -15,7 +15,7 @@ export function Label(props: ILabelProps) {
     <p
       className={
         font.className +
-        `font-normal text-md ${props.color || "text-neutral-200"}`
+        `font-normal text-md ${props.color || 'text-neutral-200'}`
       }
     >
       {props.text}

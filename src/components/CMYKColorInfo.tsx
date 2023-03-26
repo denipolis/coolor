@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import CMYKColor from "@/interfaces/CMYKColor";
-import RGBColor from "@/interfaces/RGBColor";
-import ColorInfo from "./ColorInfo";
-import React from "react";
+import CMYKColor from '@/interfaces/CMYKColor';
+import RGBColor from '@/interfaces/RGBColor';
+import ColorInfo from './ColorInfo';
+import React from 'react';
 
 interface ICMYKColorInfoProps {
   color: RGBColor;
@@ -30,31 +30,31 @@ const RGBtoCMYK = (color: RGBColor): CMYKColor => {
 
 export default function CMYKColorInfo(props: ICMYKColorInfoProps) {
   return (
-    <div className="flex flex-row h-max w-24 rounded-md text-left">
+    <div className='flex flex-row h-max w-24 rounded-md text-left'>
       <ColorInfo
         textColor={props.textColor}
-        title="Cyan"
+        title='Cyan'
         value={RGBtoCMYK(props.color).c.toString()}
         maxLength={3}
         readOnly={true}
       />
       <ColorInfo
         textColor={props.textColor}
-        title="Magenta"
+        title='Magenta'
         value={RGBtoCMYK(props.color).m.toString()}
         maxLength={3}
         readOnly={true}
       />
       <ColorInfo
         textColor={props.textColor}
-        title="Yellow"
+        title='Yellow'
         value={RGBtoCMYK(props.color).y.toString()}
         maxLength={3}
         readOnly={true}
       />
       <ColorInfo
         textColor={props.textColor}
-        title="Key"
+        title='Key'
         value={RGBtoCMYK(props.color).k.toString()}
         maxLength={3}
         readOnly={true}

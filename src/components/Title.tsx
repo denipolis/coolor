@@ -1,8 +1,8 @@
-import React from "react";
-import { Inter } from "next/font/google";
+import React from 'react';
+import { Inter } from 'next/font/google';
 
 const font = Inter({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 interface ITitleProps {
@@ -15,7 +15,7 @@ export function Title(props: ITitleProps) {
     <p
       className={
         font.className +
-        `font-bold text-xl ${props.color || "text-neutral-200"}`
+        `font-bold text-xl ${props.color || 'text-neutral-200'}`
       }
     >
       {props.text}

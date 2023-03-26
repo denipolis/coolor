@@ -1,18 +1,18 @@
-"use client";
-import { useState } from "react";
-import { RgbColorPicker } from "react-colorful";
-import ColorInfo from "@/components/ColorInfo";
-import RGBColor from "@/interfaces/RGBColor";
-import { FaGithub, FaTelegramPlane, FaPizzaSlice } from "react-icons/fa";
-import Link from "next/link";
-import RGBColorInfo from "@/components/RGBColorInfo";
-import CMYKColorInfo from "@/components/CMYKColorInfo";
-import Divider from "@/components/Divider";
+'use client';
+import { useState } from 'react';
+import { RgbColorPicker } from 'react-colorful';
+import ColorInfo from '@/components/ColorInfo';
+import RGBColor from '@/interfaces/RGBColor';
+import { FaGithub, FaTelegramPlane, FaPizzaSlice } from 'react-icons/fa';
+import Link from 'next/link';
+import RGBColorInfo from '@/components/RGBColorInfo';
+import CMYKColorInfo from '@/components/CMYKColorInfo';
+import Divider from '@/components/Divider';
 
 const RGBtoHEX = (color: RGBColor) => {
   const componentToHEX = (component: number) => {
     let value = component.toString(16);
-    return value.length == 1 ? "0" + value : value;
+    return value.length == 1 ? '0' + value : value;
   };
 
   return (
@@ -24,20 +24,20 @@ export default function Home() {
   const [color, setColor] = useState<RGBColor>({
     r: 220,
     g: 220,
-    b: 220
-  })
-  const [colorHEX, setColorHEX] = useState<string>("#" + RGBtoHEX(color));
+    b: 220,
+  });
+  const [colorHEX, setColorHEX] = useState<string>('#' + RGBtoHEX(color));
 
   const onPickerChange = ({ r, g, b }: RGBColor) => {
-    setColorHEX("#" + RGBtoHEX({ r: r, g: g, b: b }));
+    setColorHEX('#' + RGBtoHEX({ r: r, g: g, b: b }));
     setColor({ r, g, b });
   };
 
   const HEXtoRGB = (hex: string): RGBColor => {
-    hex = hex.replace("#", "");
+    hex = hex.replace('#', '');
 
     if (hex.length < 6) {
-      hex += "0";
+      hex += '0';
     }
 
     const arrayBuffer = new ArrayBuffer(4);
@@ -73,35 +73,35 @@ export default function Home() {
   };
 
   const textColor =
-    getColorBrightness(color) > 145 ? "text-neutral-800" : "text-neutral-200";
+    getColorBrightness(color) > 145 ? 'text-neutral-800' : 'text-neutral-200';
 
   return (
     <div
-      className="flex justify-center items-center h-screen w-screen overflow-hidden"
+      className='flex justify-center items-center h-screen w-screen overflow-hidden'
       style={{
         backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`,
       }}
     >
-      <div className="h-full w-full flex flex-col items-center justify-center gap-5">
-        <div className="flex lg:flex-row sm:flex-col sm:items-start md:flex-col md:items-start md:shrink-0 sm:shrink-0 lg:items-center  lg:justify-center gap-5">
+      <div className='h-full w-full flex flex-col items-center justify-center gap-5'>
+        <div className='flex lg:flex-row sm:flex-col sm:items-start md:flex-col md:items-start md:shrink-0 sm:shrink-0 lg:items-center  lg:justify-center gap-5'>
           <RgbColorPicker
             color={color}
             onChange={onPickerChange}
             style={{
-              width: "400px",
-              height: "300px",
+              width: '400px',
+              height: '300px',
             }}
           />
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-row gap-2">
+          <div className='flex flex-col gap-2'>
+            <div className='flex flex-row gap-2'>
               <ColorInfo
                 textColor={textColor}
-                title="HEX"
+                title='HEX'
                 value={colorHEX}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                   setColor(HEXtoRGB(event.target.value));
                   setColorHEX(
-                    (event.target.value.includes("#") ? "" : "#") +
+                    (event.target.value.includes('#') ? '' : '#') +
                       event.target.value
                   );
                 }}
@@ -109,12 +109,12 @@ export default function Home() {
               />
               <ColorInfo
                 textColor={textColor}
-                title="DEC"
-                value={colorToDEC(color).toString() || "0"}
+                title='DEC'
+                value={colorToDEC(color).toString() || '0'}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                   setColor(DECToColor(parseInt(event.target.value)));
                   setColorHEX(
-                    (event.target.value.includes("#") ? "" : "#") +
+                    (event.target.value.includes('#') ? '' : '#') +
                       event.target.value
                   );
                 }}
@@ -129,12 +129,12 @@ export default function Home() {
             <CMYKColorInfo color={color} textColor={textColor} />
           </div>
         </div>
-        <Divider className="w-36" />
-        <div className="flex flex-row w-full justify-center gap-3">
-          <Link href={`https://github.com/denipolis`} target="_blank">
+        <Divider className='w-36' />
+        <div className='flex flex-row w-full justify-center gap-3'>
+          <Link href={`https://github.com/denipolis`} target='_blank'>
             <FaGithub className={`h-6 w-6 ${textColor}`} />
           </Link>
-          <Link href={`https://t.me/denipolis`} target="_blank">
+          <Link href={`https://t.me/denipolis`} target='_blank'>
             <FaTelegramPlane className={`h-6 w-6 ${textColor}`} />
           </Link>
         </div>

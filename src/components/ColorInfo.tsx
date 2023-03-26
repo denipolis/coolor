@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React, { ChangeEventHandler } from "react";
-import { Inter } from "next/font/google";
-import { Title } from "./Title";
+import React, { ChangeEventHandler } from 'react';
+import { Inter } from 'next/font/google';
+import { Title } from './Title';
 
 const font = Inter({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 interface IColorInfoProps {
@@ -19,7 +19,7 @@ interface IColorInfoProps {
 
 export default function ColorInfo(props: IColorInfoProps) {
   return (
-    <div className="flex flex-col h-max w-24 rounded-md text-left">
+    <div className='flex flex-col h-max w-24 rounded-md text-left'>
       <Title text={props.title} color={props.textColor} />
       <input
         readOnly={props.readOnly}
@@ -32,7 +32,7 @@ export default function ColorInfo(props: IColorInfoProps) {
           const caretStart = e.target.selectionStart;
           const caretEnd = e.target.selectionEnd;
 
-          props.onChange ? props.onChange(e) : "";
+          props.onChange ? props.onChange(e) : '';
 
           e.target.setSelectionRange(caretStart, caretEnd);
         }}
