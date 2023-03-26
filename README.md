@@ -1,6 +1,7 @@
 <img src="https://i.imgur.com/YiEyiSC.png"/>
-<p>
+<p align="center">
     <img src="https://vercelbadge.vercel.app/api/denipolis/coolor">
+    <img src="https://img.shields.io/github/license/denipolis/coolor?color=0">
     <img src="https://img.shields.io/github/repo-size/denipolis/coolor">
     <img src="https://img.shields.io/github/issues/denipolis/coolor">
     <img src="https://img.shields.io/github/issues-pr/denipolis/coolor">
