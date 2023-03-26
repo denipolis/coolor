@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Coolor',
-  description: 'Main Page',
+  description: 'Simple and minimalistic color picker. Made with love 💘',
 };
 
 export default function RootLayout({

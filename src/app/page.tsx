@@ -8,6 +8,7 @@ import Link from 'next/link';
 import RGBColorInfo from '@/components/RGBColorInfo';
 import CMYKColorInfo from '@/components/CMYKColorInfo';
 import Divider from '@/components/Divider';
+import Head from 'next/head';
 
 const RGBtoHEX = (color: RGBColor) => {
   const componentToHEX = (component: number) => {
@@ -82,6 +83,11 @@ export default function Home() {
         backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`,
       }}
     >
+      <Head>
+        <meta name="og:title" property="og:title" content="Coolor" />
+        <meta name="og:description" property="og:description" content="Simple and minimalistic color picker. Made with love 💘" />
+        <meta name="og:image" property="og:image" content="https://coolor.vercel.app/logo.png" />
+      </Head>
       <div className='h-full w-full flex flex-col items-center justify-center gap-5'>
         <div className='flex flex-col items-start lg:flex-row lg:items-center lg:justify-center gap-5'>
           <RgbColorPicker
