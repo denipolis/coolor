@@ -28,7 +28,6 @@ export default function ColorInfo(props: IColorInfoProps) {
           `focus:border-transparent outline-none focus:ring-2 focus:px-1 ring-neutral-200 font-normal rounded-md bg-transparent ${props.textColor}`
         }
         value={props.value}
-        defaultValue={props.value}
         onChange={(e) => {
           const caretStart = e.target.selectionStart;
           const caretEnd = e.target.selectionEnd;

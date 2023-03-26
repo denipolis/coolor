@@ -21,47 +21,11 @@ const RGBtoHEX = (color: RGBColor) => {
 };
 
 export default function Home() {
-  const randomColors = [
-    {
-      r: 239,
-      g: 239,
-      b: 239,
-    },
-    {
-      r: 125,
-      g: 179,
-      b: 189,
-    },
-    {
-      r: 116,
-      g: 76,
-      b: 154,
-    },
-    {
-      r: 169,
-      g: 107,
-      b: 140,
-    },
-    {
-      r: 202,
-      g: 179,
-      b: 44,
-    },
-    {
-      r: 33,
-      g: 33,
-      b: 33,
-    },
-    {
-      r: 179,
-      g: 179,
-      b: 138,
-    },
-  ];
-
-  const [color, setColor] = useState<RGBColor>(
-    randomColors[(randomColors.length * Math.random()) | 0]
-  );
+  const [color, setColor] = useState<RGBColor>({
+    r: 220,
+    g: 220,
+    b: 220
+  })
   const [colorHEX, setColorHEX] = useState<string>("#" + RGBtoHEX(color));
 
   const onPickerChange = ({ r, g, b }: RGBColor) => {
@@ -113,13 +77,13 @@ export default function Home() {
 
   return (
     <div
-      className="flex justify-center items-center h-screen w-screen"
+      className="flex justify-center items-center h-screen w-screen overflow-hidden"
       style={{
         backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`,
       }}
     >
-      <div className="h-full flex flex-col items-center justify-center gap-5">
-        <div className="flex flex-row items-center justify-center gap-5">
+      <div className="h-full w-full flex flex-col items-center justify-center gap-5">
+        <div className="flex lg:flex-row sm:flex-col sm:items-start md:flex-col md:items-start md:shrink-0 sm:shrink-0 lg:items-center  lg:justify-center gap-5">
           <RgbColorPicker
             color={color}
             onChange={onPickerChange}
