@@ -1,6 +1,9 @@
 {
-  "name": "what-color",
-  "version": "0.1.0",
+  "name": "coolor",
+  "description": "Simple color picker made with NextJS",
+  "packageManager": "yarn@1.22.19",
+  "version": "1.0.0",
+  "author": "Denipolis",
   "private": true,
   "repository": {
     "type": "git",
