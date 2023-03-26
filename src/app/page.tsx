@@ -173,9 +173,6 @@ export default function Home() {
           <Link href={`https://t.me/denipolis`} target="_blank">
             <FaTelegramPlane className={`h-6 w-6 ${textColor}`} />
           </Link>
-          <Link href={`http://localhost:3000/api/randomColor`} target="_blank">
-            <FaPizzaSlice className={`h-6 w-6 ${textColor}`} />
-          </Link>
         </div>
       </div>
     </div>
