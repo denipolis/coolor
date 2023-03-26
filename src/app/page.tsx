@@ -83,7 +83,7 @@ export default function Home() {
       }}
     >
       <div className='h-full w-full flex flex-col items-center justify-center gap-5'>
-        <div className='flex lg:flex-row sm:flex-col sm:items-start md:flex-col md:items-start md:shrink-0 sm:shrink-0 lg:items-center  lg:justify-center gap-5'>
+        <div className='flex flex-col items-start lg:flex-row lg:items-center lg:justify-center gap-5'>
           <RgbColorPicker
             color={color}
             onChange={onPickerChange}
