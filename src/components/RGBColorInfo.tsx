@@ -28,7 +28,7 @@ export default function RGBColorInfo(props: IRGBColorInfoProps) {
       />
       <ColorInfo
         textColor={props.textColor}
-        title='Blue'
+        title='Green'
         value={props.color.g.toString()}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           props.onChange({
@@ -41,7 +41,7 @@ export default function RGBColorInfo(props: IRGBColorInfoProps) {
       />
       <ColorInfo
         textColor={props.textColor}
-        title='Green'
+        title='Blue'
         value={props.color.b.toString()}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           props.onChange({
