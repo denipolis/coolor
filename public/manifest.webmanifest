@@ -1,0 +1,21 @@
+{
+  "name": "coolor",
+  "short_name": "coolor",
+  "description": "lightweight and minimalistic color picker tool supporting hex, dec, rgb, and cmyk formats. fast, elegant, and easy to use.", 
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f6f6",
+  "theme_color": "#f6f6f6",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
