@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/github/last-commit/denipolis/coolor">
 </p>
 
-### coolor is a lightweight, minimalistic color picker tool supporting hex, dec, rgb, and cmyk formats. fast, elegant, and easy to use.
+### coolor is a lightweight, minimalistic color picker tool supporting hex, dec, rgb, and cmyk formats. fast, elegant, and easy to use 🌈
 
 ## Running locally
 1. `git clone https://github.com/denipolis/coolor.git`
