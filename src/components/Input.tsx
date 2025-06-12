@@ -1,31 +1,22 @@
-import {
-  useContext,
-  type ChangeEventHandler,
-  type FC,
-  type InputHTMLAttributes
-} from 'react'
-
-import ColorSchemeContext from '@/contexts/ColorSchemeContext'
+import { useColorScheme } from '@/hooks/useColorScheme'
 import { cn } from '@/lib/utils'
+import type { FC, InputHTMLAttributes } from 'react'
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  onChange?: ChangeEventHandler<HTMLInputElement>
   title: string
 }
 
 const Input: FC<IInputProps> = ({ title, className, ...props }) => {
-  const colorScheme = useContext(ColorSchemeContext)
+  const { textColor } = useColorScheme()
 
   return (
     <div className={cn('flex flex-col w-20 sm:w-24', className)}>
-      <span className={cn('font-bold', colorScheme.textColor)}>
-        {title}
-      </span>
+      <span className={cn('font-bold', textColor)}>{title}</span>
       <input
         {...props}
         className={cn(
           'outline-none focus:ring-2 focus:px-1 rounded-xs bg-transparent',
-          colorScheme.textColor
+          textColor
         )}
       />
     </div>
@@ -33,4 +24,3 @@ const Input: FC<IInputProps> = ({ title, className, ...props }) => {
 }
 
 export default Input
-

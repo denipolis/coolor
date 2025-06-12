@@ -40,4 +40,3 @@ const RGBInput: FC<IRGBInputProps> = ({ value, onChange }) => {
 }
 
 export default RGBInput
-

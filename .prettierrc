@@ -6,6 +6,5 @@
   "jsxSingleQuote": true,
   "singleQuote": true,
   "endOfLine": "lf",
-  "arrowParens": "avoid",
-  "plugins": ["prettier-plugin-organize-imports"]
+  "arrowParens": "avoid"
 }
